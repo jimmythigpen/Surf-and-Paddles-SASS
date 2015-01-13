@@ -298,8 +298,8 @@ a {
     display: inline-block;
 
     &:hover .first_button,
-    .second_button,
-    .third_button {
+    &:hover .second_button,
+    &:hover .third_button {
       background-color: $button-hover;
     }
 
