@@ -10,6 +10,9 @@ Base
 /*
 Mixins
 */
+/*
+CSS
+*/
 *,
 *::before,
 *::after {
@@ -78,7 +81,7 @@ a {
     transition: color 300ms; }
 
 .header_container a:hover {
-  color: white; }
+  color: #fff; }
 
 .header_top_right {
   position: absolute;
@@ -181,15 +184,6 @@ a {
   .left_info_2 p:nth-child(2) {
     margin-top: 33px; }
 
-.first_button_container:hover .first_button {
-  background-color: #003652; }
-
-.second_button_container:hover .second_button {
-  background-color: #003652; }
-
-.third_button_container:hover .third_button {
-  background-color: #003652; }
-
 .left_buttons {
   margin-top: 24px;
   margin-left: 3px;
@@ -205,6 +199,10 @@ a {
     transition: background-color 300ms;
     height: 30px;
     display: inline-block; }
+    .left_buttons > span:hover .first_button,
+    .left_buttons > span .second_button,
+    .left_buttons > span .third_button {
+      background-color: #003652; }
   .left_buttons img {
     position: relative;
     left: 3px;
@@ -246,6 +244,11 @@ a {
     border-radius: 100%;
     margin: 0 auto; }
   .right_profile_pic::after {
+    height: 84px;
+    width: 84px;
+    border-radius: 100%;
+    margin: 0 auto; }
+  .right_profile_pic::after {
     content: "";
     display: block;
     position: absolute;
@@ -254,11 +257,7 @@ a {
     left: 0;
     right: 0;
     background-color: rgba(0, 109, 178, 0.5);
-    transition: background-color 300ms;
-    max-height: 84px;
-    max-width: 84px;
-    border-radius: 100%;
-    margin: 0 auto; }
+    transition: background-color 300ms; }
   .right_profile_pic:hover::after {
     background-color: rgba(0, 109, 178, 0); }
 
@@ -272,6 +271,18 @@ a {
   margin-top: 52px;
   position: relative;
   height: 300px; }
+  .right_large_img::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 109, 178, 0.5);
+    transition: background-color 300ms; }
+  .right_large_img:hover::after {
+    background-color: rgba(0, 109, 178, 0); }
   .right_large_img span {
     position: absolute;
     right: 2px;
@@ -280,20 +291,6 @@ a {
       border-bottom: 1px solid #a0b1bd;
       color: #616a7f;
       text-decoration: none; }
-
-.right_large_img::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 109, 178, 0.5);
-  transition: background-color 300ms; }
-
-.right_large_img:hover::after {
-  background-color: rgba(0, 109, 178, 0); }
 
 .right_heading {
   text-align: left;
@@ -347,10 +344,6 @@ footer {
     display: inline-block;
     width: 25%;
     position: relative; }
-    .img_wrapper div:hover {
-      color: white; }
-      .img_wrapper div:hover::after {
-        background-color: rgba(0, 109, 178, 0); }
     .img_wrapper div::after {
       content: "";
       display: block;
@@ -361,11 +354,15 @@ footer {
       right: 0;
       background-color: rgba(0, 109, 178, 0.5);
       transition: background-color 300ms; }
+    .img_wrapper div:hover::after {
+      background-color: rgba(0, 109, 178, 0); }
   .img_wrapper img {
     width: 100%;
     height: auto; }
   .img_wrapper a {
-    color: black; }
+    color: #000; }
+    .img_wrapper a :hover {
+      color: #fff; }
 
 .img_wrapper_text {
   max-width: 90%;
